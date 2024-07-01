@@ -316,8 +316,12 @@ app.get("/question/:id", (req, res) => {
   res.locals.questionTitle = titles[id];
   res.locals.questionUrl = urls[id];
   res.render("question");
+  
 }
+else{
+  res.render("error404")
 }
+  }
 catch(error){
   console.log(error)
 }
